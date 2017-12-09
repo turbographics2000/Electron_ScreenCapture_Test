@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Electron Screen Capture Test</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #captureContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 70%;
+            height: 70%;
+            border: 1px solid;
+        }
+
+        button {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: auto;
+            bottom: 0;
+        }
+
+        .tile {
+            position: relative;
+            float: left;
+            margin: 5px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #555;
+            border-radius: 2px;
+            box-shadow: 1px 1px 1px gray;
+            cursor: pointer;
+        }
+
+        .tile:hover {
+            background: #acf;
+        }
+
+        .tile:active {
+            box-shadow: initial;
+            transform: translate(1px, 1px);
+        }
+
+        .item {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 160px;
+            height: 140px;
+        }
+
+        .thumb {
+            width: 100%;
+            height: 120px;
+            background: no-repeat center;
+        }
+
+        .label {
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="selectCaputureContainer" class="container"></div>
+    <div id="captureContainer" class="container" style="display:none">
+        <video id="vid" autoplay></video>
+        <button id="btnSelect">キャプチャー画面選択へ</button>
+    </div>
+    <script src="electron_screencapture_test.js"></script>
+</body>
+
+</html>
