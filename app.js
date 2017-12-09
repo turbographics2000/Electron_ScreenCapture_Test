@@ -19,7 +19,7 @@ app.on('ready', _ => {
 
     win = new BrowserWindow({ width: 800, height: 600 });
     win.loadURL('file://' + __dirname + '/window.html');
-    win.webContents.openDevTools();
+    //win.webContents.openDevTools();
     win.on('closed', _ => {
         win = null;
     });
